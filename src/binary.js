@@ -1,15 +1,13 @@
 import readlineSync from 'readline-sync';
 
-function getIndex() {
-  const index = readlineSync.question('Print Index: ');
-  // console.log(index);
-  return index;
+function getItem() {
+  const item = +readlineSync.question('Print Item: ');
+  return item;
 }
 
-function getMas(index) {
+function getMas() {
   const mas = [];
-  const lengthOfmas = readlineSync.question('Print length of massive: ');
-  if ((lengthOfmas - 1) < index) return null;
+  const lengthOfmas = +readlineSync.question('Print length of massive: ');
   for (let i = 0; i < lengthOfmas; i += 1) {
     const getElement = `Print ${i} element of massive: `;
     const element = +readlineSync.question(getElement);
@@ -40,24 +38,25 @@ function sortMas(mas) {
 }
 
 export default function binarySearch() {
-  const index = getIndex();
-  // console.log(index);
-  const mas = sortMas(getMas(index));
-  // console.log(mas);
-  if (mas === null) return 'index over length of massive, try again';
+  const correctItem = getItem();
+  const mas = sortMas(getMas());
+
   let highIndex = mas.length - 1;
   let lowIndex = 0;
+  let counterCircle = 0;
+
   while (lowIndex <= highIndex) {
-    const mid = Math.floor((lowIndex + highIndex) / 2);
-    // console.log(mid);
-    const guess = mas[mid];
-    // console.log(guess);
-    if (guess === mas[index]) return guess;
-    if (guess > mas[index]) {
-      highIndex = mid;
+    const midIndex = Math.floor((lowIndex + highIndex) / 2);
+    const guess = mas[midIndex];
+
+    if (guess === correctItem) return `index of item: ${midIndex}`;
+    if (guess > correctItem) {
+      highIndex = midIndex;
     } else {
-      lowIndex = mid;
+      lowIndex = midIndex;
     }
+    if (Math.log2(mas.length) < counterCircle) break;
+    counterCircle += 1;
   }
-  return null;
+  return 'massive doesn\'t have item, print new item';
 }

@@ -22,15 +22,14 @@ export function coctailSort(mas) {
       if (masSorted[j] > masSorted[j + 1]) {
         [masSorted[j], masSorted[j + 1]] = [masSorted[j + 1], masSorted[j]];
       }
-      highIndex = j;
     }
-
+    highIndex -= 1;
     for (let i = highIndex; i > lowIndex; i -= 1) {
-      if (masSorted[i] < masSorted[i - 1]) {
+      if (masSorted[i - 1] > masSorted[i]) {
         [masSorted[i], masSorted[i - 1]] = [masSorted[i - 1], masSorted[i]];
       }
-      lowIndex = i;
     }
+    lowIndex += 1;
   }
   console.log(`Sorted massive: [${masSorted}]`);
   return masSorted;

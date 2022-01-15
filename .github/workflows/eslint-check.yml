@@ -21,10 +21,11 @@ jobs:
       - run: make install      
 
   eslint-check:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: check
         run:
-           make eslint-check
+           make eslintCheck
 
 

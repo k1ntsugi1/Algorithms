@@ -1,3 +1,4 @@
+// O(n^2);
 import { copyMas } from './index.js';
 
 export function bubbleSort(mas) {
@@ -9,7 +10,6 @@ export function bubbleSort(mas) {
       }
     }
   }
-  console.log(`Sorted massive: [${masSorted}]`);
   return masSorted;
 }
 
@@ -31,6 +31,5 @@ export function coctailSort(mas) {
     }
     lowIndex += 1;
   }
-  console.log(`Sorted massive: [${masSorted}]`);
   return masSorted;
 }

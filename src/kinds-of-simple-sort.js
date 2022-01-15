@@ -33,3 +33,27 @@ export function coctailSort(mas) {
   }
   return masSorted;
 }
+
+export function evenUnevenSort(mas) {
+  const masSorted = copyMas(mas);
+  let circle;
+  do {
+    circle = false;
+
+    for (let i = 0; i < masSorted.length; i += 2) {
+      if (masSorted[i] > masSorted[i + 1]) {
+        [masSorted[i], masSorted[i + 1]] = [masSorted[i + 1], masSorted[i]];
+        circle = true;
+      }
+    }
+
+    for (let j = 1; j < masSorted.length; j += 2) {
+      if (masSorted[j] > masSorted[j + 1]) {
+        [masSorted[j], masSorted[j + 1]] = [masSorted[j + 1], masSorted[j]];
+        circle = true;
+      }
+    }
+  } while (circle);
+
+  return masSorted;
+}

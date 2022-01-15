@@ -57,3 +57,26 @@ export function evenUnevenSort(mas) {
 
   return masSorted;
 }
+
+export function factorReductionSort(mas) {
+  const masSorted = copyMas(mas);
+
+  let stopItem = 2;
+  let step = masSorted.length - 1;
+  const factorReduction = 1.247;
+
+  do {
+    for (let i = 0; i < masSorted.length - 1; i += 1) {
+      if (masSorted[i] > masSorted[i + step]) {
+        [masSorted[i], masSorted[i + step]] = [masSorted[i + step], masSorted[i]];
+      }
+      if (i + step === masSorted.length - 1) break;
+    }
+    step = Math.floor(step / factorReduction);
+    if (step === 1) {
+      stopItem -= 1;
+    }
+    // console.log(masSorted);
+  } while (stopItem);
+  return masSorted;
+}

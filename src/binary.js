@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { coctailSort } from './kinds-of-simpl-sort.js';
+import { coctailSort } from './kinds-of-simple-sort.js';
 import { getMas } from './index.js';
 
 function getItem() {

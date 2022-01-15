@@ -3,7 +3,7 @@ on:
    push:
       branches: [ main ]
 jobs:
-  build:
+  job1:
 
 
     runs-on: ubuntu-latest
@@ -19,13 +19,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: make install      
-
-  eslint-check:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: check
-        run:
-           make eslintCheck
+      - run: make eslintCheck
 
 

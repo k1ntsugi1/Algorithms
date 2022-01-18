@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import {
   bubbleSort,
+  choiceSort,
   coctailSort,
   evenUnevenSort,
   factorReductionSort,
@@ -16,3 +17,5 @@ console.log(`the massive that was sorted by the coctail-Sort: [${coctailSort(mas
 console.log(`the massive that was sorted by the even-uneven-Sort: [${evenUnevenSort(mas)}]`);
 
 console.log(`the massive that was sorted by the factor-reduction-Sort: [${factorReductionSort(mas)}]`);
+
+console.log(`the massive that was sorted by the choice-Sort: [${choiceSort(mas)}]`);

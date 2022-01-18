@@ -79,3 +79,20 @@ export function factorReductionSort(mas) {
   }
   return masSorted;
 }
+
+export function choiceSort(mas) {
+  const masClone = copyMas(mas);
+  const sortedMas = [];
+  const savedLength = masClone.length;
+  for (let j = 0; j < savedLength; j += 1) {
+    let savedIndex = 0;
+    let smallestItem = masClone[savedIndex];
+    for (let i = 0; i < masClone.length; i += 1) {
+      if (masClone[i] < smallestItem) [smallestItem, savedIndex] = [masClone[i], i];
+    }
+
+    sortedMas.push(smallestItem);
+    masClone.splice(savedIndex, 1);
+  }
+  return sortedMas;
+}

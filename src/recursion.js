@@ -23,20 +23,27 @@ function maxOfList(mas) {
   return maxOfList(masClone);
 }
 
-function binarySearch(mas, item) {
-  let sortedMas = quickSort(mas);
+function binarySearch(mas, item, count = 1, sumOfIndexes = 0) {
+  let sortedMas = count === 1 ? quickSort(mas) : mas;
+  console.log(sortedMas);
   const highIndex = sortedMas.length - 1;
   const lowIndex = 0;
   const mid = Math.floor((highIndex + lowIndex) / 2);
+  let countDepth = count + 1;
 
-  if (sortedMas[mid] === item) return mid;
+  if (sortedMas[mid] === item) return mid + sumOfIndexes;
+  if (sortedMas.length <= 1) return 'massive doesnt has item';
 
   if (sortedMas[mid] > item) {
     sortedMas = sortedMas.slice(lowIndex, mid);
-    return binarySearch(sortedMas, item);
+    countDepth += 1;
+    return binarySearch(sortedMas, item, countDepth);
   }
   sortedMas = sortedMas.slice(mid + 1);
-  return binarySearch(sortedMas, item);
+  countDepth += 1;
+  // eslint-disable-next-line no-param-reassign
+  sumOfIndexes += 1 + mid;
+  return binarySearch(sortedMas, item, countDepth, sumOfIndexes);
 }
 
 export {

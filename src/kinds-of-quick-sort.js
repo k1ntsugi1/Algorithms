@@ -1,7 +1,8 @@
 // O(n*log(n))
 function quickSort(mas) {
   if (mas.length <= 1) return mas;
-  const pivot = mas[0];
+  const index = Math.round((mas.length - 1) / 2); // for log(n);
+  const pivot = mas[index];
 
   const middleElement = mas.filter((item) => item === pivot);
   const bigElements = mas.filter((item) => item > pivot);

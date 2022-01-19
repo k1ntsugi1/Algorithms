@@ -16,7 +16,8 @@
   "bin": {
     "binary-search": "bin/binary-search.js",
     "simple-sort": "bin/simple-sort.js",
-    "quick-sort": "bin/quick-sort.js"
+    "quick-sort": "bin/quick-sort.js",
+    "recursion": "bin/recursion.js"
   },
   "bugs": {
     "url": "https://github.com/k1ntsugi1/Algorithms/issues"

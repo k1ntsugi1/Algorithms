@@ -13,7 +13,7 @@ export function binarySearch(correctItem, mas) {
   while (lowIndex <= highIndex) {
     const midIndex = Math.floor((lowIndex + highIndex) / 2);
     const guess = mas[midIndex];
-    if (guess === correctItem) return (`index of item: ${midIndex}`);
+    if (guess === correctItem) return midIndex;
     if (guess > correctItem) {
       highIndex = midIndex - 1; // else I can't reach first index;
     } else {
@@ -22,5 +22,5 @@ export function binarySearch(correctItem, mas) {
     if (Math.log2(mas.length) < counterCircle) break;
     counterCircle += 1;
   }
-  return 'massive doesn\'t have item, print new item';
+  return null;
 }

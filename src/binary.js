@@ -1,16 +1,11 @@
 import readlineSync from 'readline-sync';
-import { coctailSort } from './kinds-of-simple-sort.js';
-import { getMas } from './index.js';
 
-function getItem() {
+export function getItem() {
   const item = Number(readlineSync.question('Print Item: '));
   return item;
 }
 
-export default function binarySearch() {
-  const correctItem = getItem();
-  const mas = coctailSort(getMas());
-
+export function binarySearch(correctItem, mas) {
   let highIndex = mas.length - 1;
   let lowIndex = 0;
   let counterCircle = 0;

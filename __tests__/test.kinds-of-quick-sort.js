@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import { quickSort, quickSort2 } from '../src/kinds-of-quick-sort.js';
 
 let mas;

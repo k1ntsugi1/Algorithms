@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import {
   sumOfItems, countLengthOfMas,
   findMaxOfList, binarySearch,

@@ -1,8 +1,7 @@
 // O(n^2);
-import { copyMas } from './index.js';
 
 export function bubbleSort(mas) {
-  const masSorted = copyMas(mas);
+  const masSorted = mas.slice();
   for (let i = masSorted.length; i > 0; i -= 1) {
     for (let j = 0; j < i; j += 1) {
       if (masSorted[j] > masSorted[j + 1]) {
@@ -14,7 +13,7 @@ export function bubbleSort(mas) {
 }
 
 export function coctailSort(mas) {
-  const masSorted = copyMas(mas);
+  const masSorted = mas.slice();
   let lowIndex = 0;
   let highIndex = masSorted.length - 1;
   while (lowIndex < highIndex) {
@@ -35,7 +34,7 @@ export function coctailSort(mas) {
 }
 
 export function evenUnevenSort(mas) {
-  const masSorted = copyMas(mas);
+  const masSorted = mas.slice();
   let circle;
   do {
     circle = false;
@@ -59,7 +58,7 @@ export function evenUnevenSort(mas) {
 }
 
 export function factorReductionSort(mas) {
-  const masSorted = copyMas(mas);
+  const masSorted = mas.slice();
   let check = 2;
   let step = masSorted.length - 1;
   const factorReduction = 1.247;
@@ -81,7 +80,7 @@ export function factorReductionSort(mas) {
 }
 
 export function choiceSort(mas) {
-  const masClone = copyMas(mas);
+  const masClone = mas.slice();
   const sortedMas = [];
   const savedLength = masClone.length;
   for (let j = 0; j < savedLength; j += 1) {

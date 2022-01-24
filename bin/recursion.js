@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { getMas } from '../src/index.js';
+import getMas from '../src/index.js';
 import {
   sumOfItems, countLengthOfMas,
   findMaxOfList, binarySearch,

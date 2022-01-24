@@ -6,7 +6,7 @@ import {
   evenUnevenSort,
   factorReductionSort,
 } from '../src/kinds-of-simple-sort.js';
-import { getMas } from '../src/index.js';
+import getMas from '../src/index.js';
 
 const mas = getMas();
 

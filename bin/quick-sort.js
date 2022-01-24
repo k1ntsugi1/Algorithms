@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { quickSort, quickSort2 } from '../src/kinds-of-quick-sort.js';
-import { getMas } from '../src/index.js';
+import getMas from '../src/index.js';
 
 const mas = getMas();
 

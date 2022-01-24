@@ -12,10 +12,6 @@ export function getMas() {
 }
 
 export function copyMas(mas) {
-  const masCopied = [];
-  /* eslint-disable-next-line */
-  for (const key of mas) {
-    masCopied.push(key);
-  }
+  const masCopied = slice();
   return masCopied;
 }

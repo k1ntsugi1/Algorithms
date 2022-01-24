@@ -37,18 +37,7 @@ test('evenUnevenSort', () => {
   expect(evenUnevenSort(mas3)).toEqual([1]);
   expect(evenUnevenSort(mas4)).toEqual([]);
 });
-<<<<<<< HEAD
 
-=======
-/*
-test('factorReductionSort', () => {
-  expect(factorReductionSort(mas)).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
-  expect(factorReductionSort(mas2)).toEqual([-8, -7, -6, -5, -4, -3, -2, -1]);
-  expect(factorReductionSort(mas3)).toEqual([1]);
-  expect(factorReductionSort(mas4)).toEqual([]);
-});
-*/
->>>>>>> d82d3eaa72d1f4621ad64ee11844945f328fac8b
 test('choiceSort', () => {
   expect(choiceSort(mas)).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
   expect(choiceSort(mas2)).toEqual([-8, -7, -6, -5, -4, -3, -2, -1]);

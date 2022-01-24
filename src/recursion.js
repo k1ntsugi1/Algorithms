@@ -1,4 +1,4 @@
-import quickSort from './kinds-of-quick-sort.js';
+import { quickSort } from './kinds-of-quick-sort.js';
 
 function sumOfItems(mas) {
   const masClone = mas.slice();

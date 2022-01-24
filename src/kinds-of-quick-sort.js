@@ -10,19 +10,22 @@ function quickSort(mas) {
 
   return quickSort(smallElements).concat(middleElement, quickSort(bigElements));
 }
-export default quickSort;
 
 // i use code that below if i dont wont to use methods .filter or .reduce
-/*
-function quickSort(mas) {
+
+function quickSort2(mas) {
   if (mas.length <= 1) return mas;
   const pivot = mas[0];
   const bigElements = [];
   const smallElements = [];
-  for (let i = 1; i < mas.length; i +=1){
+  for (let i = 1; i < mas.length; i += 1) {
     const currentItem = mas[i];
-    currentItem >= pivot ? bigElements.push(currentItem): smallElements.push(currentItem);
+    if (currentItem >= pivot) {
+      bigElements.push(currentItem);
+    } else {
+      smallElements.push(currentItem);
+    }
   }
-  return quickSort(smallElements).concat(pivot, quickSort(bigElements));
+  return quickSort2(smallElements).concat(pivot, quickSort(bigElements));
 }
-*/
+export { quickSort, quickSort2 };

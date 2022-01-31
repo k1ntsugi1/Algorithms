@@ -11,13 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/k1ntsugi1/Algorithms.git"
   },
-  "author": "",
+  "author": "k1ntsug1",
   "license": "ISC",
   "bin": {
     "binary-search": "bin/binary-search.js",
     "simple-sort": "bin/simple-sort.js",
     "quick-sort": "bin/quick-sort.js",
-    "recursion": "bin/recursion.js"
+    "recursion": "bin/recursion.js",
+    "Breadth-First-Search-graph": "bin/Breadth-First-Search-graph.js"
   },
   "bugs": {
     "url": "https://github.com/k1ntsugi1/Algorithms/issues"

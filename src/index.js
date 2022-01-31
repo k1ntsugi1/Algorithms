@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export default function getMas() {
+function getMas() {
   const mas = [];
   const lengthOfmas = Number(readlineSync.question('Print length of massive: '));
   for (let i = 0; i < lengthOfmas; i += 1) {
@@ -10,3 +10,5 @@ export default function getMas() {
   }
   return mas;
 }
+
+export default getMas;
